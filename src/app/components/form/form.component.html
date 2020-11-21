@@ -1,11 +1,16 @@
 <form class="form">
     <label class="form__label">Nombre de usuario</label>
-    <input class="form_input js-name" type="text" (keyup.enter)="searchResult(userInput.value)" #userInput>
+    <input class="form_input js-name" type="text" #userInput>
     <label class="form__label">Nombre de repositorio</label>
-    <input class="form__input js-repo" type="text" (keyup.enter)="searchResult(textInput.value)" #textInput>
+    <input class="form__input js-repo" type="text" #textInput>
     <button type="button" class="form__button js-btn2" (click)="getIssuesGithub()">Buscar</button>
-    <!-- <p class="js-result2"></p> -->
+    <div class="gridResult js-result2">
+    </div>
 </form>
 
 
 <!-- *ngIf="showForm" -->
+
+<!-- [routerLink]="['result']" -->
+
+<!-- (keyup.enter)="searchResult(textInput.value)" -->
