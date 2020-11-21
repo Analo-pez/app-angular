@@ -1,0 +1,21 @@
+@import "../../../styling/vars";
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    &__label {
+        margin: 15px 0px 10px 0px;
+    }
+    &__input {
+        width: 250px;
+    }
+    &__button {
+        margin-top: 30px;
+        background-color: $button-color;
+        width: 100px;
+        height: 30px;
+        color: $dark-color;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+}

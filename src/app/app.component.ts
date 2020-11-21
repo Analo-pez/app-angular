@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'App-Angular';
-  subtitle = 'He creado una "prop" subtitle';
-  mainTitle = 'Me está flipando Angular';
+  title = 'Consultor de Issues';
+  subtitle = 'Consulta las issues de un repositorio de Github'
 }
