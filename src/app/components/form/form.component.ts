@@ -10,7 +10,9 @@ export class FormComponent {
 
     showForm = true;
 
+
     getIssuesGithub = () => {
+        this.showForm = false;
         const name = document.querySelector(".js-name");
         const repo = document.querySelector(".js-repo");
         const results2 = document.querySelector('.js-result2');

@@ -14,10 +14,10 @@
     background-color: $brand-color;
     color: white;
     font-weight: 600;
-}
-
-.toolbar img {
-    margin: 0 30px;
+    &__img {
+        margin: 0 30px;
+        border-radius: 50px;
+    }
 }
 
 .toolbar #twitter-logo {

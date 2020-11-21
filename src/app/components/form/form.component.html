@@ -1,12 +1,12 @@
-<form class="form">
+<form *ngIf="showForm" class="form">
     <label class="form__label">Nombre de usuario</label>
-    <input class="form_input js-name" type="text" #userInput>
+    <input class="form__input js-name" type="text" #userInput>
     <label class="form__label">Nombre de repositorio</label>
     <input class="form__input js-repo" type="text" #textInput>
     <button type="button" class="form__button js-btn2" (click)="getIssuesGithub()">Buscar</button>
-    <div class="gridResult js-result2">
-    </div>
 </form>
+<div class="gridResult js-result2">
+</div>
 
 
 <!-- *ngIf="showForm" -->
