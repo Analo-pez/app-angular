@@ -1,8 +1,8 @@
 <form *ngIf="showForm" class="form">
     <label class="form__label">Nombre de usuario</label>
-    <input class="form__input js-name" type="text" #userInput>
+    <input name="username" class="form__input js-name" type="text" #userInput>
     <label class="form__label">Nombre de repositorio</label>
-    <input class="form__input js-repo" type="text" #textInput>
+    <input name="reponame" class="form__input js-repo" type="text" #textInput>
     <button type="button" class="form__button js-btn2" (click)="getIssuesGithub()">Buscar</button>
 </form>
 <div class="gridResult js-result2">
