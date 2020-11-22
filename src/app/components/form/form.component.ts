@@ -25,7 +25,6 @@ export class FormComponent {
                     alert("No hay issues en este repositorio. ¡¡Refresca la página!!")
                 } else {
                     this.issues = data;
-                    console.log(data)
                 }
             })
     }
