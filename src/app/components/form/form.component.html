@@ -6,11 +6,15 @@
     <button type="button" class="form__button js-btn2" (click)="getIssuesGithub(userInput, repoInput)">Buscar</button>
 </form>
 <div class="gridResult js-result2">
+    <div *ngFor="let issue of issues" class="card" style="width: 18rem;">
+        <img src={{issue.user.avatar_url}} class="card-img-top" alt="Author-image">
+        <div class="card-body">
+            <h5 class="card-title">Title: {{issue.title}}</h5>
+            <p class="card-text">Author: {{issue.user.login}}</p>
+            <p class="card-text">State: {{issue.state}}</p>
+            <p class="card-text">Description: {{issue.body}}</p>
+            <p class="card-text">Created at: {{issue.created_at}}</p>
+            <a class="btn btn-primary" href={{issue.html_url}} target="_blank">Link to issue </a>
+        </div>
+    </div>
 </div>
-
-
-<!-- *ngIf="showForm" -->
-
-<!-- [routerLink]="['result']" -->
-
-<!-- (keyup.enter)="searchResult(textInput.value)" -->
