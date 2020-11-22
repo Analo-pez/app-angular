@@ -2,8 +2,8 @@
     <label class="form__label">Nombre de usuario</label>
     <input name="username" class="form__input js-name" type="text" #userInput>
     <label class="form__label">Nombre de repositorio</label>
-    <input name="reponame" class="form__input js-repo" type="text" #textInput>
-    <button type="button" class="form__button js-btn2" (click)="getIssuesGithub()">Buscar</button>
+    <input name="reponame" class="form__input js-repo" type="text" #repoInput>
+    <button type="button" class="form__button js-btn2" (click)="getIssuesGithub(userInput, repoInput)">Buscar</button>
 </form>
 <div class="gridResult js-result2">
 </div>

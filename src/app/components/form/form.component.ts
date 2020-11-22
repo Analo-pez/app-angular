@@ -10,15 +10,13 @@ export class FormComponent {
 
     showForm = true;
 
-    getIssuesGithub = () => {
+    getIssuesGithub(item1: HTMLInputElement, item2: HTMLInputElement) {
         this.showForm = false;
-        const name = document.querySelector(".js-name");
-        const repo = document.querySelector(".js-repo");
-        const results2 = document.querySelector('.js-result2');
-        const username = name.value;
-        const reponame = repo.value;
 
-        fetch(`https://api.github.com/repos/${username}/${reponame}/issues`)
+        const results2 = document.querySelector('.js-result2');
+
+
+        fetch(`https://api.github.com/repos/${item1.value}/${item2.value}/issues`)
             .then(response => response.json())
             .then(data => {
                 if (data.message === "Not Found") {
