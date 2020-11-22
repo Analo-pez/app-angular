@@ -10,18 +10,19 @@ export class FormComponent {
 
     showForm = true;
 
-    getIssuesGithub = () => {
-        const name = document.querySelector(".js-name");
-        const repo = document.querySelector(".js-repo");
-        const results2 = document.querySelector('.js-result2');
-        const username = name.value;
-        const reponame = repo.value;
+    getIssuesGithub(item1: HTMLInputElement, item2: HTMLInputElement) {
+        this.showForm = false;
 
-        fetch(`https://api.github.com/repos/${username}/${reponame}/issues`)
+        const results2 = document.querySelector('.js-result2');
+
+
+        fetch(`https://api.github.com/repos/${item1.value}/${item2.value}/issues`)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
-                if (data == "") {
+                if (data.message === "Not Found") {
+                    return results2.innerHTML += `<div class="card"><p> Los datos introducidos son incorrectos</p></div>`
+                }
+                else if (data == "") {
                     return results2.innerHTML += `<div class="card"><p> No hay issues en este repositorio</p></div>`
 
                 } else {
