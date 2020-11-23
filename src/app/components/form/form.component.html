@@ -5,6 +5,7 @@
     <input name="reponame" class="form__input js-repo" type="text" #repoInput>
     <button type="button" class="form__button js-btn2" (click)="getIssuesGithub(userInput, repoInput)">Buscar</button>
 </form>
+<ngx-spinner></ngx-spinner>
 <div class="gridResult js-result2">
     <div *ngFor="let issue of issues" class="card" style="width: 18rem;">
         <img src={{issue.user.avatar_url}} class="card-img-top" alt="Author-image">

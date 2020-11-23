@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 
 @Component({
@@ -8,12 +9,22 @@ import { Component } from '@angular/core';
 })
 export class FormComponent {
 
+    constructor(private spinner: NgxSpinnerService) { }
+
+    showSpinner() {
+        this.spinner.show();
+        setTimeout(() => {
+            this.spinner.hide();
+        }, 500);
+    }
+
     showForm = true;
 
     issues: any[] = [];
 
     getIssuesGithub(item1: HTMLInputElement, item2: HTMLInputElement) {
         this.showForm = false;
+        this.showSpinner();
 
         fetch(`https://api.github.com/repos/${item1.value}/${item2.value}/issues`)
             .then(response => response.json())
