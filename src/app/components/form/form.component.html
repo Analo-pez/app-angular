@@ -7,7 +7,7 @@
 </form>
 <ngx-spinner></ngx-spinner>
 <div class="gridResult js-result2">
-    <div *ngFor="let issue of issues" class="card" style="width: 18rem;">
+    <div *ngFor="let issue of issues | paginate: {itemsPerPage: 6, currentPage: pageActual}" class="card" style="width: 18rem;">
         <img src={{issue.user.avatar_url}} class="card-img-top" alt="Author-image">
         <div class="card-body">
             <h5 class="card-title">Title: {{issue.title}}</h5>
@@ -18,4 +18,6 @@
             <a class="btn btn-primary" href={{issue.html_url}} target="_blank">Link to issue </a>
         </div>
     </div>
+
 </div>
+<pagination-controls class="pagination" *ngIf="showPagination" (pageChange)="pageActual = $event"></pagination-controls>

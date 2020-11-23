@@ -19,12 +19,18 @@ export class FormComponent {
     }
 
     showForm = true;
+    showPagination = false;
 
     issues: any[] = [];
 
+    pageActual = 1;
+
+
     getIssuesGithub(item1: HTMLInputElement, item2: HTMLInputElement) {
         this.showForm = false;
+        this.showPagination = true;
         this.showSpinner();
+
 
         fetch(`https://api.github.com/repos/${item1.value}/${item2.value}/issues`)
             .then(response => response.json())
