@@ -1,13 +1,13 @@
 <form *ngIf="showForm" class="form">
-    <label class="form__label">Username/reponame</label>
+    <label class="form__label">Nombre de usuario</label>
     <input name="username" class="form__input js-name" type="text" #username>
-    <!-- <label class="form__label">Nombre de repositorio</label>
-    <input name="reponame" class="form__input js-repo" type="text" #repoInput> -->
-    <button type="button" class="form__button js-btn2" (click)="search(username.value)">Buscar</button>
+    <label class="form__label">Nombre de repositorio</label>
+    <input name="reponame" class="form__input js-repo" type="text" #reponame>
+    <button type="button" class="form__button js-btn2" (click)="search(username.value, reponame.value)">Buscar</button>
 </form>
-<ngx-spinner></ngx-spinner>
+<!-- <ngx-spinner></ngx-spinner> -->
 <div class="gridResult js-result2">
-    <div *ngFor="let issue of issues | paginate: {itemsPerPage: 6, currentPage: pageActual}" class="card" style="width: 18rem;">
+    <div *ngFor="let issue of issues " class="card" style="width: 18rem;">
         <img src={{issue.user.avatar_url}} class="card-img-top" alt="Author-image">
         <div class="card-body">
             <h5 class="card-title">Title: {{issue.title}}</h5>
@@ -20,4 +20,7 @@
     </div>
 
 </div>
-<pagination-controls class="pagination" *ngIf="showPagination" (pageChange)="pageActual = $event"></pagination-controls>
+<!-- <pagination-controls class="pagination" *ngIf="showPagination" (pageChange)="pageActual = $event"></pagination-controls> -->
+
+
+<!-- | paginate: {itemsPerPage: 6, currentPage: pageActual} -->

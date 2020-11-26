@@ -10,8 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 //Externals
-import { NgxSpinnerModule } from 'ngx-spinner';
-import { NgxPaginationModule } from 'ngx-pagination';
+// import { NgxSpinnerModule } from 'ngx-spinner';
+// import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -33,8 +33,8 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    NgxSpinnerModule,
-    NgxPaginationModule,
+    // NgxSpinnerModule,
+    // NgxPaginationModule,
     HttpClientModule,
   ],
   providers: [],
