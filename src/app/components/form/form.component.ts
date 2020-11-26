@@ -31,6 +31,9 @@ export class FormComponent {
                 this.loading = false;
                 this.showPage = true;
                 console.log(data)
+            }, (error) => {
+                this.loading = false;
+                alert("Ha habido un error. \n \n ¡Refresca la página!")
             })
     }
 
