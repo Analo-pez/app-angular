@@ -7,5 +7,6 @@
 </form>
 <app-loading *ngIf="loading"></app-loading>
 <div class="gridResult js-result2">
-    <app-result [issue]="issue" *ngFor="let issue of issues "></app-result>
+    <app-result [issue]="issue" *ngFor="let issue of issues | paginate: { itemsPerPage: 9, currentPage: p } "></app-result>
 </div>
+<pagination-controls class="controllerPage" (pageChange)="p = $event" *ngIf="showPage"></pagination-controls>

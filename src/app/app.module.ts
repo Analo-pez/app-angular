@@ -8,6 +8,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 // Routes
 import { AppRoutingModule } from './app-routing.module';
 
+//Externals
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 // Components
 import { AppComponent } from './app.component';
@@ -29,9 +32,10 @@ import { LoadingComponent } from './components/loading/loading.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     NgbModule,
+    AppRoutingModule,
     HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent],

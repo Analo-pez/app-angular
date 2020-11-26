@@ -10,10 +10,13 @@ import { GithubService } from '../../services/github.service';
 export class FormComponent {
 
     loading: boolean = false;
-
     showForm = true;
+    showPage = false;
+
+    p: number = 1;
 
     issues: any[] = [];
+
 
     constructor(private github: GithubService) {
 
@@ -25,7 +28,8 @@ export class FormComponent {
         this.github.getIssues(username, reponame)
             .subscribe((data: any) => {
                 this.issues = data;
-                this.loading = false
+                this.loading = false;
+                this.showPage = true;
                 console.log(data)
             })
     }
