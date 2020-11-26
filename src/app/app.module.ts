@@ -9,17 +9,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 
-//Externals
-// import { NgxSpinnerModule } from 'ngx-spinner';
-// import { NgxPaginationModule } from 'ngx-pagination';
-
-
-
 // Components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormComponent } from './components/form/form.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ResultComponent } from './components/result/result.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 
 @NgModule({
@@ -27,14 +23,14 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     HeaderComponent,
     FormComponent,
-    FooterComponent
+    FooterComponent,
+    ResultComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    // NgxSpinnerModule,
-    // NgxPaginationModule,
     HttpClientModule,
   ],
   providers: [],

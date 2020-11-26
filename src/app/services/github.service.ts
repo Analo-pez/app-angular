@@ -18,7 +18,7 @@ export class GithubService {
     }
 
     getIssues(username: string, reponame: string) {
-        return this.getQuery(`${username}/${reponame}/issues?page=5&per_page=100`)
+        return this.getQuery(`${username}/${reponame}/issues?page=1&per_page=100`)
             .pipe(map(data => data))
     }
 
