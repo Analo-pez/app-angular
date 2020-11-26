@@ -1,9 +1,9 @@
 <form *ngIf="showForm" class="form">
-    <label class="form__label">Nombre de usuario</label>
-    <input name="username" class="form__input js-name" type="text" #userInput>
-    <label class="form__label">Nombre de repositorio</label>
-    <input name="reponame" class="form__input js-repo" type="text" #repoInput>
-    <button type="button" class="form__button js-btn2" (click)="getIssuesGithub(userInput, repoInput)">Buscar</button>
+    <label class="form__label">Username/reponame</label>
+    <input name="username" class="form__input js-name" type="text" #username>
+    <!-- <label class="form__label">Nombre de repositorio</label>
+    <input name="reponame" class="form__input js-repo" type="text" #repoInput> -->
+    <button type="button" class="form__button js-btn2" (click)="search(username.value)">Buscar</button>
 </form>
 <ngx-spinner></ngx-spinner>
 <div class="gridResult js-result2">

@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 // Routes
 import { AppRoutingModule } from './app-routing.module';
@@ -32,7 +34,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AppRoutingModule,
     NgbModule,
     NgxSpinnerModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
