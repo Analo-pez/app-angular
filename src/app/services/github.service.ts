@@ -20,7 +20,7 @@ export class GithubService {
     }
 
     getIssues(username: string, reponame: string): Observable<any> {
-        return this.getQuery(`${username}/${reponame}/issues?page=1&per_page=100`)
+        return this.getQuery(`${username}/${reponame}/issues?page=1&per_page=99`)
             .pipe(catchError(this.handleError))
     }
     handleError(error: any) {
